@@ -8,6 +8,7 @@
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="fusion2urdf@prosystem24.de">Spacemaster85</maintainer>
+  <maintainer email="s20c1066ab@s.chibakoudai.jp">TakumuTakanezawa</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -52,6 +53,7 @@
   <build_depend>rospy</build_depend>
   <build_export_depend>rospy</build_export_depend>
   <exec_depend>rospy</exec_depend>
+  <exec_depend>robot_contest_moveit_config</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
