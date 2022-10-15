@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<robot name="moveit_sample" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find moveit_sample_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find moveit_sample_description)/urdf/moveit_sample.trans" />
+<xacro:include filename="$(find moveit_sample_description)/urdf/moveit_sample.gazebo" />
+
+<link name="dummy">
+</link>
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-7.237528875152536e-18 -1.447505775030507e-17 0.005" rpy="0 0 0"/>
+    <mass value="0.6165375582669969"/>
+    <inertia ixx="0.00039" iyy="0.00039" izz="0.000771" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="part1_1">
+  <inertial>
+    <origin xyz="-0.0017277137374306876 6.723447632535409e-13 0.04595059880172599" rpy="0 0 0"/>
+    <mass value="0.09652666146617676"/>
+    <inertia ixx="0.000103" iyy="0.000102" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/part1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/part1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="part2_1">
+  <inertial>
+    <origin xyz="0.0031621405528323497 0.050000000055879366 -5.586570095417187e-11" rpy="0 0 0"/>
+    <mass value="0.07650347985448655"/>
+    <inertia ixx="8.1e-05" iyy="1e-06" izz="8e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/part2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/part2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="part3_1">
+  <inertial>
+    <origin xyz="-0.00307725002425259 0.04554389318565036 -5.588342288920245e-11" rpy="0 0 0"/>
+    <mass value="0.0757185188746656"/>
+    <inertia ixx="7.5e-05" iyy="1e-06" izz="7.5e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.1 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/part3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.1 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/part3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="d_part1_1">
+  <inertial>
+    <origin xyz="-2.10969707193732e-33 5.587930118622353e-11 -5.5879384452950376e-11" rpy="0 0 0"/>
+    <mass value="0.0005137812985558307"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.2 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/d_part1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.2 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/d_part1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="d_part2_1">
+  <inertial>
+    <origin xyz="-2.10969707193732e-33 5.587930118622353e-11 -5.5879384452950376e-11" rpy="0 0 0"/>
+    <mass value="0.004110250388446646"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.2 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/d_part2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.2 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/d_part2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="d_part3_1">
+  <inertial>
+    <origin xyz="-2.10969707193732e-33 5.587930118622353e-11 -5.5879384452950376e-11" rpy="0 0 0"/>
+    <mass value="0.004110250388446646"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.2 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/d_part3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="_"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.2 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveit_sample_description/meshes/d_part3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="dummy_joint" type="fixed">
+  <parent link="dummy"/>
+  <child link="base_link"/>
+</joint>
+
+<joint name="rev1" type="continuous">
+  <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="part1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="rev2" type="continuous">
+  <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
+  <parent link="part1_1"/>
+  <child link="part2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="rev3" type="continuous">
+  <origin xyz="-0.0 0.1 0.0" rpy="0 0 0"/>
+  <parent link="part2_1"/>
+  <child link="part3_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="d_rev1" type="continuous">
+  <origin xyz="0.0 0.1 0.0" rpy="0 0 0"/>
+  <parent link="part3_1"/>
+  <child link="d_part1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="d_rev2" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="d_part1_1"/>
+  <child link="d_part2_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="d_rev3" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="d_part2_1"/>
+  <child link="d_part3_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+</robot>
