@@ -1,9 +1,0 @@
-<launch>
-
-<rosparam file="$(find _sample_description)/launch/controller.yaml" command="load"/>
-<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="moveit_sample" args="rev1_position_controller rev2_position_controller rev3_position_controller d_rev1_position_controller d_rev2_position_controller d_rev3_position_controller joint_state_controller "/>
-<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
-  <remap from="/joint_states" to="/moveit_sample/joint_states"/>
-</node>
-
-</launch>
